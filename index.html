@@ -12,6 +12,7 @@
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Light background color for better contrast */
         }
 
         .game-container {
@@ -22,8 +23,8 @@
 
         .color-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
+            grid-template-columns: repeat(3, 208px); /* Ensure each column is exactly 208px */
+            gap: 10px; /* Space between boxes */
             margin-bottom: 20px;
         }
 
@@ -33,6 +34,7 @@
             border: 2px solid #000;
             border-radius: 5px;
             cursor: pointer;
+            box-sizing: border-box; /* Include border in width and height */
         }
 
         .color-square.red {
@@ -61,6 +63,8 @@
             background-color: #007BFF;
             color: white;
             transition: background-color 0.3s;
+            text-decoration: none; /* Remove underline from the link */
+            display: inline-block; /* Ensure proper button styling */
         }
 
         .bet-button:hover {
@@ -70,6 +74,7 @@
         .message {
             margin-top: 20px;
             font-size: 18px;
+            text-align: center; /* Center-align the message text */
         }
     </style>
 </head>
