@@ -1,23 +1,36 @@
-
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-	<title>
-		Create button to open SMS
-		compose to a phone number
-	</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clickable Link</title>
+    <style>
+        .color-change {
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            background-color: white;
+            padding: 10px 20px;
+            border: 2px solid black;
+            border-radius: 5px;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        .color-change.clicked {
+            color: white;
+            background-color: black;
+        }
+    </style>
 </head>
-
 <body>
-	<p>
-		For any queries you can text
-		us at the below number:
-	</p>
+    <a href="sms:+254719269219" class="color-change" id="smsLink">Click to Send SMS</a>
 
-	<a href="sms:+254719269219">0</a>
-
-  
+    <script>
+        document.getElementById('smsLink').addEventListener('click', function() {
+            this.classList.toggle('clicked');
+            this.textContent = this.classList.contains('clicked') ? 'Sending SMS...' : 'Click to Send SMS';
+        });
+    </script>
 </body>
-
 </html>
+
